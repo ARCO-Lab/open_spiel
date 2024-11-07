@@ -55,7 +55,7 @@ _GAME_TYPE = pyspiel.GameType(
     provides_observation_tensor=True,
     parameter_specification=_DEFAULT_PARAMS)
 
-# TODO down from here, need to rework
+
 class GT3Game(pyspiel.Game):
   """A Python version of a Generalized Tic-Tac-Toe game."""
 
