@@ -232,8 +232,9 @@ def _win_exists(state):
           if state.board[row][col] == player:
               current_row = row
               current_col = col
-              while current_row < state.board_size and current_col > 0 \
+              while current_row < state.board_size and current_col >= 0 \
                       and state.board[current_row][current_col] == player:
+                  print(current_row, current_col)
                   win_check += 1
                   current_row += 1
                   current_col -= 1
