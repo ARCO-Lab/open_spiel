@@ -20,8 +20,8 @@ from open_spiel.python.pytorch import my_dqn
 from open_spiel.python.utils.replay_buffer import ReplayBuffer
 
 # set path where the trained model will be saved
-OUTPUT_MODEL_PATH = 'my_models/trained_models/trained_fc.pth'
-OUTPUT_PLOT_PATH = 'my_models/trained_models/training_fc.png'
+OUTPUT_MODEL_PATH = 'my_models/trained_models/trained_model.pth'
+OUTPUT_PLOT_PATH = 'my_models/trained_models/training_model.png'
 
 # define game parameters
 BOARD_SIZE = 3
