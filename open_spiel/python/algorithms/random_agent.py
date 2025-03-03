@@ -23,7 +23,7 @@ class RandomAgent(rl_agent.AbstractAgent):
 
   def __init__(self, player_id, num_actions, name="random_agent"):
     assert num_actions > 0
-    self._player_id = player_id
+    self.player_id = player_id
     self._num_actions = num_actions
 
   def step(self, time_step, is_evaluation=False):
@@ -32,7 +32,7 @@ class RandomAgent(rl_agent.AbstractAgent):
       return
 
     # Pick a random legal action.
-    cur_legal_actions = time_step.observations["legal_actions"][self._player_id]
+    cur_legal_actions = time_step.observations["legal_actions"][self.player_id]
     action = np.random.choice(cur_legal_actions)
     probs = np.zeros(self._num_actions)
     probs[cur_legal_actions] = 1.0 / len(cur_legal_actions)
