@@ -32,7 +32,7 @@ class RandomAgent(rl_agent.AbstractAgent):
       return
 
     # Pick a random legal action.
-    cur_legal_actions = time_step.observations["legal_actions"][self.player_id]
+    cur_legal_actions = time_step.observations["legal_actions"][self.player_id] if time_step.observations["legal_actions"][self.player_id] else time_step.observations["legal_actions"][1 - self.player_id]
     action = np.random.choice(cur_legal_actions)
     probs = np.zeros(self._num_actions)
     probs[cur_legal_actions] = 1.0 / len(cur_legal_actions)
