@@ -1,3 +1,8 @@
+# For CAS_752 Students
+The CAS_752 directory has everything you need for assignment 3:
+- Implement your G-CNN in my_models/my_nn.py
+- Train your G-CNN by running my_trainer.py
+- Play Generalized Tic-Tac-Toe with play_gt3.py
 
 # OpenSpiel: A Framework for Reinforcement Learning in Games
 
